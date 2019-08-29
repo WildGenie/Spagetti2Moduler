@@ -43,11 +43,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cinsiyet.cs" />
+    <Compile Include="Esya.cs" />
+    <Compile Include="EsyaKatman.cs" />
+    <Compile Include="EsyaTur.cs" />
+    <Compile Include="Irk.cs" />
+    <Compile Include="Karakter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sinif.cs" />
+    <Compile Include="Yetenekler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="OyunSiniflari.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
