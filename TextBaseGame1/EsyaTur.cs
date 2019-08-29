@@ -1,6 +1,6 @@
 ﻿namespace TextBaseGame1
 {
-  public enum EsyaTur
+  public enum EsyaTur : int
   {
     None,
     Silah,

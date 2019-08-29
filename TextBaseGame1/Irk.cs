@@ -1,6 +1,6 @@
 ﻿namespace TextBaseGame1
 {
-  public enum Irk
+  public enum Irk : int
   {
     Yok,
     Insan,

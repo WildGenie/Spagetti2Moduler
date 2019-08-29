@@ -1,66 +1,80 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="TextBaseGame1.Program" Collapsed="true">
-    <Position X="6.5" Y="0.5" Width="1.5" />
+    <Position X="5.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAAAACAAAAEBCAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAgAAAAAAEBIAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TextBaseGame1.Karakter">
     <Position X="2.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAACAAAAAAAAAAACAAAAAAAAAAAAAAAAASAAAAA=</HashCode>
+      <HashCode>AAAAAAACAAAAAAAAAFACQAAAAAAAAAAAAAAAASAAAAA=</HashCode>
       <FileName>Karakter.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TextBaseGame1.Esya">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAEAAAAIAAAAAAQACAAAAAQAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AACAAAAAAAAAAQAAAAAAAAAQABAAAAAAAAAAAAgAEAA=</HashCode>
       <FileName>Esya.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Enum Name="TextBaseGame1.Cinsiyet" Collapsed="true">
-    <Position X="0.5" Y="3.25" Width="1.5" />
+  <Struct Name="TextBaseGame1.StatYapi">
+    <Position X="8.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>StatYapi.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="TextBaseGame1.Cinsiyet">
+    <Position X="2.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAACAQAAAAAAAAAAAAAA=</HashCode>
       <FileName>Cinsiyet.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="TextBaseGame1.Irk" Collapsed="true">
-    <Position X="0.5" Y="4" Width="1.5" />
+  <Enum Name="TextBaseGame1.Irk">
+    <Position X="2.25" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAgAABAAAAAAAAAAAAAAAAIQAAgAAAIAAAAAAA=</HashCode>
       <FileName>Irk.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="TextBaseGame1.Sinif" Collapsed="true">
-    <Position X="2.25" Y="4" Width="1.5" />
+  <Enum Name="TextBaseGame1.Sinif">
+    <Position X="0.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAEAAAAIAAIAAAAAAgAAAQBAAAAAAAAAAAAA=</HashCode>
       <FileName>Sinif.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="TextBaseGame1.Yetenek" Collapsed="true">
-    <Position X="4" Y="4" Width="1.5" />
+  <Enum Name="TextBaseGame1.Yetenek">
+    <Position X="5.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAQAEAAAAAAAAAAAAAAAAAAQCAAAAAAAAAAAAI=</HashCode>
       <FileName>Yetenekler.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="TextBaseGame1.EsyaTur" Collapsed="true">
-    <Position X="4" Y="3.25" Width="1.5" />
+  <Enum Name="TextBaseGame1.EsyaTur">
+    <Position X="7.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAAAACAEAAABAAAgBAAAAAAAEAAAAAAABQAEAIAA=</HashCode>
       <FileName>EsyaTur.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="TextBaseGame1.EsyaKatman" Collapsed="true">
-    <Position X="2.25" Y="3.25" Width="1.5" />
+  <Enum Name="TextBaseGame1.EsyaKatman">
+    <Position X="4" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAACgAAgAAAAAAAAAAAAAAAAAEAAAIAIAJAAEQAAA=</HashCode>
       <FileName>EsyaKatman.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TextBaseGame1.Stat">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQoAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Stat.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

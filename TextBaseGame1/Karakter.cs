@@ -26,6 +26,40 @@
     {
       get;
       set;
+    } = new Dictionary<Yetenek, int>()
+          {
+            [Yetenek.Yok] = 0,
+            [Yetenek.HafifSilah] = 0,
+            [Yetenek.AgirSilah] = 0,
+            [Yetenek.CiftSilah] = 0,
+            [Yetenek.UzunMenzilliSilah] = 0,
+            [Yetenek.Buyu] = 0,
+
+    };
+
+    public List<Esya> Esyalari
+    {
+      get;
+      set;
+    } = new List<Esya>();
+
+    public Pos Konumu
+    {
+      get;
+      set;
     }
+
+    public Dictionary<Stat, StatYapi> Statlari
+    {
+      get;
+      set;
+    } = new Dictionary<Stat, StatYapi>();
+  }
+
+  public struct Pos
+  {
+    public int X;
+
+    public int Y;
   }
 }

@@ -1,6 +1,6 @@
 ﻿namespace TextBaseGame1
 {
-  public enum Cinsiyet
+  public enum Cinsiyet : int
   {
     Yok,
     Erkek,

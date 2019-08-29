@@ -1,76 +1,74 @@
 ﻿namespace TextBaseGame1
 {
   using System;
+  using System.Collections.Generic;
 
   public class Program
   {
     public static void Main(string[] args)
     {
-      var yetenekler = new int[6];
-      string[] yetenekIsim = { "Yok", "Kalkan Silah", "Çift Silah", "Çift El Silah", "Uzak Mesafe Silah", "Büyü" };
 
-      var sinif = string.Empty;
-      var cinsiyet = string.Empty;
-      var irk = string.Empty;
-      string cikti;
-      string girdi;
-      bool hata;
+      var karakter = new Karakter();
 
-      cinsiyet = Cinsiyet();
 
-      Console.WriteLine("Cinsiyetiniz " + cinsiyet);
+      karakter.Cinsiyeti = CinsiyetSec();
 
-      sinif = Sinif(yetenekler);
+      Console.WriteLine("Cinsiyetiniz " + karakter.Cinsiyeti);
 
-      Console.WriteLine("Sinifiniz " + sinif);
+      karakter.Sinifi = SinifSec(karakter);
 
-      irk = Irk(yetenekler);
+      Console.WriteLine("Sinifiniz " + karakter.Sinifi);
 
-      Console.WriteLine("irkiniz " + irk);
+      karakter.Irki = IrkSec(karakter);
 
-      for (var i = 1; i <= 5; i++) Console.WriteLine("{0}: {1}", yetenekIsim[i], yetenekler[i]);
+      Console.WriteLine("irkiniz " + karakter.Irki);
+
+      foreach (KeyValuePair<Yetenek, int> pair in karakter.Yetenekleri)
+      {
+        Console.WriteLine("{0}: {1}", pair.Key, pair.Value);
+      }
 
       Console.WriteLine("Bir Tuşa Basınız.");
       Console.ReadLine();
     }
 
-    private static string Irk(int[] yetenekler)
+    private static Irk IrkSec(Karakter karakter)
     {
       bool hata;
-      string girdi;
-      string irk = string.Empty;
+      Irk irk = TextBaseGame1.Irk.Yok;
+      var yetenekler = karakter.Yetenekleri;
       do
       {
         hata = false;
         var cikti = "Irkını Seç!\n1. İnsan\n2. Elf\n3. Ork\n4. Cüce\n5. Goblin";
         Console.WriteLine(cikti);
-        girdi = Console.ReadLine();
+        var girdi = Console.ReadLine();
         switch (girdi)
         {
           case "1":
-            irk = "İnsan";
-            yetenekler[1] += 2;
-            yetenekler[5]++;
+            irk = TextBaseGame1.Irk.Insan;
+            yetenekler[Yetenek.HafifSilah] += 2;
+            yetenekler[Yetenek.Buyu]++;
             break;
           case "2":
-            irk = "Elf";
-            yetenekler[4] += 2;
-            yetenekler[3]++;
+            irk = TextBaseGame1.Irk.Elf;
+            yetenekler[Yetenek.UzunMenzilliSilah] += 2;
+            yetenekler[Yetenek.AgirSilah]++;
             break;
           case "3":
-            irk = "Ork";
-            yetenekler[3] += 2;
-            yetenekler[4]++;
+            irk = TextBaseGame1.Irk.Ork;
+            yetenekler[Yetenek.AgirSilah] += 2;
+            yetenekler[Yetenek.UzunMenzilliSilah]++;
             break;
           case "4":
-            irk = "Cüce";
-            yetenekler[1] += 2;
-            yetenekler[2]++;
+            irk = TextBaseGame1.Irk.Cuce;
+            yetenekler[Yetenek.Buyu] += 2;
+            yetenekler[Yetenek.CiftSilah]++;
             break;
           case "5":
-            irk = "Goblin";
-            yetenekler[2] += 2;
-            yetenekler[1]++;
+            irk = TextBaseGame1.Irk.Goblin;
+            yetenekler[Yetenek.CiftSilah] += 2;
+            yetenekler[Yetenek.HafifSilah]++;
             break;
           default:
             hata = true;
@@ -82,11 +80,12 @@
       return irk;
     }
 
-    private static string Sinif(int[] yetenekler)
+    private static Sinif SinifSec(Karakter karakter)
     {
       bool hata;
       string girdi;
-      string sinif = string.Empty;
+      Sinif sinif = TextBaseGame1.Sinif.Yok;
+      var yetenekler = karakter.Yetenekleri;
       do
       {
         hata = false;
@@ -96,29 +95,29 @@
         switch (girdi)
         {
           case "1":
-            sinif = "Savaşçı";
-            yetenekler[1] += 2;
-            yetenekler[3] += 1;
+            sinif = TextBaseGame1.Sinif.Savasci;
+            yetenekler[Yetenek.HafifSilah] += 2;
+            yetenekler[Yetenek.AgirSilah] += 1;
             break;
           case "2":
-            sinif = "Hırsız";
-            yetenekler[2] += 2;
-            yetenekler[4]++;
+            sinif = TextBaseGame1.Sinif.Hirsiz;
+            yetenekler[Yetenek.CiftSilah] += 2;
+            yetenekler[Yetenek.UzunMenzilliSilah]++;
             break;
           case "3":
-            sinif = "Barbar";
-            yetenekler[3] += 2;
-            yetenekler[1]++;
+            sinif = TextBaseGame1.Sinif.Barbar;
+            yetenekler[Yetenek.AgirSilah] += 2;
+            yetenekler[Yetenek.HafifSilah]++;
             break;
           case "4":
-            sinif = "Avcı";
-            yetenekler[4] += 2;
-            yetenekler[5]++;
+            sinif = TextBaseGame1.Sinif.Avci;
+            yetenekler[Yetenek.UzunMenzilliSilah] += 2;
+            yetenekler[Yetenek.Buyu]++;
             break;
           case "5":
-            sinif = "Büyücü";
-            yetenekler[5] += 2;
-            yetenekler[1]++;
+            sinif = TextBaseGame1.Sinif.Buyucu;
+            yetenekler[Yetenek.Buyu] += 2;
+            yetenekler[Yetenek.HafifSilah]++;
             break;
           default:
             hata = true;
@@ -130,11 +129,11 @@
       return sinif;
     }
 
-    private static string Cinsiyet()
+    private static Cinsiyet CinsiyetSec()
     {
       bool hata;
       string girdi;
-      string cinsiyet = string.Empty;
+      Cinsiyet cinsiyet = TextBaseGame1.Cinsiyet.Yok;
       do
       {
         hata = false;
@@ -144,10 +143,10 @@
         switch (girdi)
         {
           case "1":
-            cinsiyet = "Erkek";
+            cinsiyet = TextBaseGame1.Cinsiyet.Erkek;
             break;
           case "2":
-            cinsiyet = "Kadın";
+            cinsiyet = TextBaseGame1.Cinsiyet.Kadin;
             break;
           default:
             hata = true;

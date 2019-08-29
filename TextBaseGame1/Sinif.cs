@@ -1,6 +1,6 @@
 ﻿namespace TextBaseGame1
 {
-  public enum Sinif
+  public enum Sinif : int
   {
     Yok,
     Savasci,
