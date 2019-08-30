@@ -11,15 +11,15 @@
       var karakter = new Karakter();
 
 
-      karakter.Cinsiyeti = CinsiyetSec();
+      CinsiyetSec(karakter);
 
       Console.WriteLine("Cinsiyetiniz " + karakter.Cinsiyeti);
 
-      karakter.Sinifi = SinifSec(karakter);
+      SinifSec(karakter);
 
       Console.WriteLine("Sinifiniz " + karakter.Sinifi);
 
-      karakter.Irki = IrkSec(karakter);
+      IrkSec(karakter);
 
       Console.WriteLine("irkiniz " + karakter.Irki);
 
@@ -32,7 +32,7 @@
       Console.ReadLine();
     }
 
-    private static Irk IrkSec(Karakter karakter)
+    private static void IrkSec(Karakter karakter)
     {
       bool hata;
       Irk irk = TextBaseGame1.Irk.Yok;
@@ -46,29 +46,19 @@
         switch (girdi)
         {
           case "1":
-            irk = TextBaseGame1.Irk.Insan;
-            yetenekler[Yetenek.HafifSilah] += 2;
-            yetenekler[Yetenek.Buyu]++;
+            karakter.IrkBelirle(TextBaseGame1.Irk.Insan);
             break;
           case "2":
-            irk = TextBaseGame1.Irk.Elf;
-            yetenekler[Yetenek.UzunMenzilliSilah] += 2;
-            yetenekler[Yetenek.AgirSilah]++;
+            karakter.IrkBelirle(TextBaseGame1.Irk.Elf);
             break;
           case "3":
-            irk = TextBaseGame1.Irk.Ork;
-            yetenekler[Yetenek.AgirSilah] += 2;
-            yetenekler[Yetenek.UzunMenzilliSilah]++;
+            karakter.IrkBelirle(TextBaseGame1.Irk.Ork);
             break;
           case "4":
-            irk = TextBaseGame1.Irk.Cuce;
-            yetenekler[Yetenek.Buyu] += 2;
-            yetenekler[Yetenek.CiftSilah]++;
+            karakter.IrkBelirle(TextBaseGame1.Irk.Cuce);
             break;
           case "5":
-            irk = TextBaseGame1.Irk.Goblin;
-            yetenekler[Yetenek.CiftSilah] += 2;
-            yetenekler[Yetenek.HafifSilah]++;
+            karakter.IrkBelirle(TextBaseGame1.Irk.Goblin);
             break;
           default:
             hata = true;
@@ -77,10 +67,10 @@
       }
       while (hata);
 
-      return irk;
+      return;
     }
 
-    private static Sinif SinifSec(Karakter karakter)
+    private static void SinifSec(Karakter karakter)
     {
       bool hata;
       string girdi;
@@ -95,29 +85,19 @@
         switch (girdi)
         {
           case "1":
-            sinif = TextBaseGame1.Sinif.Savasci;
-            yetenekler[Yetenek.HafifSilah] += 2;
-            yetenekler[Yetenek.AgirSilah] += 1;
+            karakter.SinifBelirle(TextBaseGame1.Sinif.Savasci);
             break;
           case "2":
-            sinif = TextBaseGame1.Sinif.Hirsiz;
-            yetenekler[Yetenek.CiftSilah] += 2;
-            yetenekler[Yetenek.UzunMenzilliSilah]++;
+            karakter.SinifBelirle(TextBaseGame1.Sinif.Hirsiz);
             break;
           case "3":
-            sinif = TextBaseGame1.Sinif.Barbar;
-            yetenekler[Yetenek.AgirSilah] += 2;
-            yetenekler[Yetenek.HafifSilah]++;
+            karakter.SinifBelirle(TextBaseGame1.Sinif.Barbar);
             break;
           case "4":
-            sinif = TextBaseGame1.Sinif.Avci;
-            yetenekler[Yetenek.UzunMenzilliSilah] += 2;
-            yetenekler[Yetenek.Buyu]++;
+            karakter.SinifBelirle(TextBaseGame1.Sinif.Avci);
             break;
           case "5":
-            sinif = TextBaseGame1.Sinif.Buyucu;
-            yetenekler[Yetenek.Buyu] += 2;
-            yetenekler[Yetenek.HafifSilah]++;
+            karakter.SinifBelirle(TextBaseGame1.Sinif.Buyucu);
             break;
           default:
             hata = true;
@@ -126,10 +106,10 @@
       }
       while (hata);
 
-      return sinif;
+      return;
     }
 
-    private static Cinsiyet CinsiyetSec()
+    private static void CinsiyetSec(Karakter karakter)
     {
       bool hata;
       string girdi;
@@ -143,10 +123,10 @@
         switch (girdi)
         {
           case "1":
-            cinsiyet = TextBaseGame1.Cinsiyet.Erkek;
+            karakter.CinsiyetBelirle(TextBaseGame1.Cinsiyet.Erkek);
             break;
           case "2":
-            cinsiyet = TextBaseGame1.Cinsiyet.Kadin;
+            karakter.CinsiyetBelirle(TextBaseGame1.Cinsiyet.Kadin);
             break;
           default:
             hata = true;
@@ -155,7 +135,7 @@
       }
       while (hata);
 
-      return cinsiyet;
+      return;
     }
 
     // .NET can only read single characters or entire lines from the console.
