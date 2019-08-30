@@ -1,16 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="TextBaseGame1.Program" Collapsed="true">
-    <Position X="5.75" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAgAAAAAAEBIAAAAA=</HashCode>
-      <FileName>Program.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="TextBaseGame1.Karakter">
     <Position X="2.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAACAAAAAAAAAFACQAAAAAAAAAAAAAAAASAAAAA=</HashCode>
+      <HashCode>AAAAAAACAAAAAAAAAFACRAAAAAAAAAAQAAAAASQAAAA=</HashCode>
       <FileName>Karakter.cs</FileName>
     </TypeIdentifier>
   </Class>
