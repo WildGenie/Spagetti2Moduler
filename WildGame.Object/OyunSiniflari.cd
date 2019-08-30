@@ -1,4 +1,74 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WildGame.Object.Esya">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAQAAAAAAAAAQABAAAAAAAAAAAAgAEAA=</HashCode>
+      <FileName>Esya.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WildGame.Object.Karakter">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAQAAAFACRAAAAAAAAAAQAAAAASQAAAA=</HashCode>
+      <FileName>Karakter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="WildGame.Object.Pos" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Karakter.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="WildGame.Object.Cinsiyet" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAACAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cinsiyet.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="WildGame.Object.EsyaKatman" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAACgAAgAAAAAAAAAAAAAAAAAEAAAIAIAJAAEQAAA=</HashCode>
+      <FileName>EsyaKatman.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="WildGame.Object.EsyaTur" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAACAEAAABAAAgBAAAAAAAEAAAAAAABQAEAIAA=</HashCode>
+      <FileName>EsyaTur.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="WildGame.Object.Irk" Collapsed="true">
+    <Position X="7" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAABAAAAAAAAAAAAAAAAIQAAgAAAIAAAAAAA=</HashCode>
+      <FileName>Irk.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="WildGame.Object.Sinif" Collapsed="true">
+    <Position X="8.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAIAAIAAAAAAgAAAQBAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sinif.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="WildGame.Object.Stat">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIAAABAAAAAAAAAgAAAAAAAAQoAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Stat.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="WildGame.Object.Yetenek" Collapsed="true">
+    <Position X="7" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAQAEAAAAAAAAAAAAAAAAAAQCAAAAAAAAAAAAI=</HashCode>
+      <FileName>Yetenekler.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

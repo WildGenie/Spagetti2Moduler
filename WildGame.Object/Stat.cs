@@ -5,6 +5,10 @@
     Yok,
     HP,
     MP,
-    SP
+    SP,
+    Seviye,
+    KalanYetenekPuani,
+    Tecrube,
+    DagitilanYetenekPuani
   }
 }
