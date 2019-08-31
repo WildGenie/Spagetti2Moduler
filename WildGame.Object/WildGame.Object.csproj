@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attribs.cs" />
     <Compile Include="Cinsiyet.cs" />
     <Compile Include="Esya.cs" />
     <Compile Include="EsyaKatman.cs" />
@@ -50,6 +51,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sinif.cs" />
     <Compile Include="Stat.cs" />
+    <Compile Include="Stats.cs" />
     <Compile Include="StatYapi.cs" />
     <Compile Include="Yetenekler.cs" />
   </ItemGroup>

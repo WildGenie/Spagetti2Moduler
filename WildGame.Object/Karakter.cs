@@ -7,6 +7,7 @@
   {
     public Karakter()
     {
+      this.Statlari = new Stats(this);
       SeviyeBelirle(0);
     }
 
@@ -54,21 +55,22 @@
       set;
     }
 
-    public Dictionary<Stat, StatYapi> Statlari
+    public Stats Statlari
     {
       get; set;
+    }
 
-    } = new Dictionary<Stat, StatYapi>()
-    {
-      [Stat.Seviye] = new StatYapi(),
-      [Stat.HP] = new StatYapi(10),
-      [Stat.MP] = new StatYapi(10),
-      [Stat.SP] = new StatYapi(10),
-      [Stat.Tecrube] = new StatYapi(),
-      [Stat.DagitilanYetenekPuani] = new StatYapi(),
-      [Stat.KalanYetenekPuani] = new StatYapi()
+    //  = new Dictionary<StatName, StatYapi>()
+    //{
+    //  [StatName.Seviye] = new StatYapi(),
+    //  [StatName.HP] = new StatYapi(10),
+    //  [StatName.MP] = new StatYapi(10),
+    //  [StatName.SP] = new StatYapi(10),
+    //  [StatName.Tecrube] = new StatYapi(),
+    //  [StatName.DagitilanYetenekPuani] = new StatYapi(),
+    //  [StatName.KalanYetenekPuani] = new StatYapi()
 
-    };
+    //};
 
 
     public bool SinifBelirle(Sinif sinif)
@@ -165,21 +167,21 @@
 
     public void TecrubeGelistir(int puan)
     {
-      Statlari[Stat.Tecrube].Mevcut += puan;
-      if (Statlari[Stat.Tecrube].Mevcut >= Statlari[Stat.Tecrube].Maksimum)
+      Statlari[StatName.Tecrube].Mevcut += puan;
+      if (Statlari[StatName.Tecrube].Mevcut >= Statlari[StatName.Tecrube].Maksimum)
       {
-        SeviyeBelirle(Statlari[Stat.Seviye].Mevcut + 1);
+        SeviyeBelirle(Statlari[StatName.Seviye].Mevcut + 1);
       }
     }
 
     public void SeviyeBelirle(int seviye)
     {
-      Statlari[Stat.Seviye].Mevcut = seviye;
-      Statlari[Stat.Seviye].Maksimum = seviye;
-      Statlari[Stat.Tecrube].Maksimum = 1000 * (int)Math.Pow(2, seviye);
-      Statlari[Stat.HP].Maksimum = 10 + seviye * 10;
-      Statlari[Stat.MP].Maksimum = 10 + seviye * 10;
-      Statlari[Stat.SP].Maksimum = 10 + seviye * 5;
+      Statlari[StatName.Seviye].Mevcut = seviye;
+      Statlari[StatName.Seviye].Maksimum = seviye;
+      Statlari[StatName.Tecrube].Maksimum = 1000 * (int)Math.Pow(2, seviye);
+      Statlari[StatName.HP].Maksimum = 10 + seviye * 10;
+      Statlari[StatName.MP].Maksimum = 10 + seviye * 10;
+      Statlari[StatName.SP].Maksimum = 10 + seviye * 5;
     }
 
     public void IrkBelirle(Irk irk)

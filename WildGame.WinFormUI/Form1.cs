@@ -27,7 +27,8 @@ namespace WildGame.WinFormUI
       this.comboBox3.DataSource = Enum.GetValues(typeof(Sinif));
       this.propertyGrid1.SelectedObject = this.karakter;
       this.propertyGrid2.SelectedObject = new DictionaryPropertyGridAdapter(this.karakter.Yetenekleri);
-      this.propertyGrid3.SelectedObject = new DictionaryPropertyGridAdapter(this.karakter.Statlari);
+      this.propertyGrid3.SelectedObject =
+        this.karakter.Statlari; //new DictionaryPropertyGridAdapter(this.karakter.Statlari);
     }
 
     private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)

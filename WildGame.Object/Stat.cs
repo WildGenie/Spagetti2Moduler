@@ -1,6 +1,6 @@
 ﻿namespace WildGame.Object
 {
-  public enum Stat : int
+  public enum StatName : int
   {
     Yok,
     HP,

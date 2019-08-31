@@ -2,6 +2,7 @@
 {
   using System;
 
+  [PropertyObject]
   public class StatYapi
   {
     public int Mevcut;
