@@ -10,12 +10,12 @@
   <Class Name="WildGame.Object.Karakter">
     <Position X="2.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAACAAAAAQAAAFACRAAAAAAAAAAQAAAAASQAAAA=</HashCode>
+      <HashCode>AAAABAACAAAAgQAAAFACRAAAAAAAAAAQAAAAASQAAAA=</HashCode>
       <FileName>Karakter.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WildGame.Object.Stats">
-    <Position X="3.5" Y="0.75" Width="1.5" />
+    <Position X="7" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QIAAgBAAAAAAABAgCAAACAAAQoAAAAAEAAAAAAAAAAA=</HashCode>
       <FileName>Stats.cs</FileName>
@@ -25,7 +25,7 @@
   <Struct Name="WildGame.Object.Pos" Collapsed="true">
     <Position X="12.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
       <FileName>Karakter.cs</FileName>
     </TypeIdentifier>
   </Struct>

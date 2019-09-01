@@ -178,10 +178,26 @@
     {
       Statlari[StatName.Seviye].Mevcut = seviye;
       Statlari[StatName.Seviye].Maksimum = seviye;
+
+
       Statlari[StatName.Tecrube].Maksimum = 1000 * (int)Math.Pow(2, seviye);
       Statlari[StatName.HP].Maksimum = 10 + seviye * 10;
       Statlari[StatName.MP].Maksimum = 10 + seviye * 10;
       Statlari[StatName.SP].Maksimum = 10 + seviye * 5;
+    }
+
+    public void Buff(int artis)
+    {
+      Statlari[StatName.HP] += artis;
+      Statlari[StatName.MP] += artis;
+      Statlari[StatName.SP] += artis;
+    }
+
+    public void UnBuff(int artis)
+    {
+      Statlari[StatName.HP] -= artis;
+      Statlari[StatName.MP] -= artis;
+      Statlari[StatName.SP] -= artis;
     }
 
     public void IrkBelirle(Irk irk)
@@ -261,5 +277,19 @@
     public int X;
 
     public int Y;
+
+    public Pos(int X, int Y) : this()
+    {
+      this.X = X;
+      this.Y = Y;
+    }
+
+    public override string ToString()
+    {
+      return $"{X}, {Y}";
+    }
+
+    public static Pos operator +(Pos sol, Pos sag) =>
+      new Pos { X = sol.X + sag.X, Y = sol.Y + sag.Y };
   }
 }

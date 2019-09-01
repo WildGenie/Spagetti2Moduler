@@ -58,5 +58,55 @@ namespace WildGame.WinFormUI
       this.karakter.TecrubeGelistir(100);
       this.propertyGrid3.Refresh();
     }
+
+    private void Button2_Click(object sender, EventArgs e)
+    {
+      this.karakter.Buff(10);
+      this.propertyGrid3.Refresh();
+
+    }
+
+    private void Button3_Click(object sender, EventArgs e)
+    {
+      this.karakter.UnBuff(10);
+      this.propertyGrid3.Refresh();
+
+    }
+
+    private void Button4_Click(object sender, EventArgs e)
+    {
+      int seviyesi = this.karakter.Statlari[StatName.Seviye];
+
+      this.textBox1.Text = seviyesi.ToString();
+    }
+
+    private void Button5_Click(object sender, EventArgs e)
+    {
+      
+      this.karakter.Konumu += new Pos(1, 0);      
+      propertyGrid1.Refresh();
+
+    }
+
+    private void Button8_Click(object sender, EventArgs e)
+    {
+      this.karakter.Konumu += new Pos(-1, 0);
+      propertyGrid1.Refresh();
+
+    }
+
+    private void Button7_Click(object sender, EventArgs e)
+    {
+      this.karakter.Konumu += new Pos(0, 1);
+      propertyGrid1.Refresh();
+
+    }
+
+    private void Button6_Click(object sender, EventArgs e)
+    {
+      this.karakter.Konumu += new Pos(0, -1);
+      propertyGrid1.Refresh();
+
+    }
   }
 }

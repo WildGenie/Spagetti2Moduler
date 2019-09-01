@@ -45,7 +45,7 @@
       {
         return this._stats[(int)tecrube];
       }
-      private set
+      set
       {
         this._stats[(int)tecrube] = value;
       }

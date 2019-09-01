@@ -26,6 +26,25 @@
       this.Maksimum = maksimum;
     }
 
+    public static StatYapi operator +(StatYapi stat, int artis)
+    {
+      stat.Mevcut += artis;
+      stat.Maksimum += artis;
+      return stat;
+    }
+
+    public static StatYapi operator -(StatYapi stat, int artis)
+    {
+      stat.Mevcut -= artis;
+      stat.Maksimum -= artis;
+      return stat;
+    }
+
+    public static implicit operator int(StatYapi stat)
+    {
+      return stat.Mevcut;
+    }
+
     public override string ToString()
     {
       return $"{this.Mevcut}/{this.Maksimum}";
